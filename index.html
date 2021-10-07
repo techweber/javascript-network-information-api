@@ -1,0 +1,10 @@
+<script>
+let preloadVideo = true;
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+if (connection) {
+  if (connection.effectiveType === 'slow-2g') {
+    preloadVideo = false;
+  }
+}
+console.log(connection.effectiveType);
+</script>
